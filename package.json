@@ -86,5 +86,12 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "resolutions": {
+    "path-to-regexp": "^8.4.0",
+    "body-parser": "^2.4.0",
+    "multer": "^2.5.0",
+    "proxy-addr": "^2.0.8",
+    "qs": "^6.16.0"
   }
 }
