@@ -13,7 +13,7 @@ import { CreateEndpointDto } from './dto/create-endpoint.dto';
 import { UpdateEndpointDto } from './dto/update-endpoint.dto';
 import { MonitorService } from '../monitor/monitor.service';
 
-const FREE_ENDPOINT_LIMIT = 3;
+export const FREE_ENDPOINT_LIMIT = 10;
 
 @Injectable()
 export class EndpointsService {
@@ -31,9 +31,7 @@ export class EndpointsService {
         where: { userId: user.id },
       });
       if (count >= FREE_ENDPOINT_LIMIT) {
-        throw new ForbiddenException(
-          'FREE_PLAN_LIMIT',
-        );
+        throw new ForbiddenException('FREE_PLAN_LIMIT');
       }
     }
 
